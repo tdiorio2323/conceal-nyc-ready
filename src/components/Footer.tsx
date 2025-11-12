@@ -102,6 +102,22 @@ const Footer = () => {
           </div>
         </div>
 
+        {/* Google Maps Embed */}
+        <div className="mb-6 sm:mb-8">
+          <div className="w-full h-64 sm:h-80 md:h-96 rounded-lg overflow-hidden border border-border shadow-lg">
+            <iframe
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3031.3!2d-74.2184813!3d40.5523175!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c3b59ee44cf029%3A0x5dc06f55dac0066c!2s103%20Tactical!5e0!3m2!1sen!2sus!4v1699999999999!5m2!1sen!2sus"
+              width="100%"
+              height="100%"
+              style={{ border: 0 }}
+              allowFullScreen
+              loading="lazy"
+              referrerPolicy="no-referrer-when-downgrade"
+              title="103 Tactical Location"
+            ></iframe>
+          </div>
+        </div>
+
         {/* Bottom Bar */}
         <div className="border-t border-border pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <p className="text-black text-sm">
