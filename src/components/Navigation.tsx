@@ -1,9 +1,12 @@
 import { useState, useEffect } from "react";
+import { useNavigate, useLocation } from "react-router-dom";
 import logo from "@/assets/logo.png";
 
 const Navigation = () => {
   const [isScrolled, setIsScrolled] = useState(false);
   const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const navigate = useNavigate();
+  const location = useLocation();
 
   useEffect(() => {
     const handleScroll = () => {
@@ -14,11 +17,26 @@ const Navigation = () => {
   }, []);
 
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
-      setIsMobileMenuOpen(false);
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
+    setIsMobileMenuOpen(false);
+  };
+
+  const handleLogoClick = () => {
+    navigate("/");
+    window.scrollTo({ top: 0, behavior: "smooth" });
   };
 
   return (
@@ -29,7 +47,9 @@ const Navigation = () => {
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
-          <img src={logo} alt="103 Tactical" className="h-14 w-auto" />
+          <button onClick={handleLogoClick} className="focus:outline-none">
+            <img src={logo} alt="103 Tactical" className="h-14 w-auto" />
+          </button>
 
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
@@ -40,7 +60,7 @@ const Navigation = () => {
               CCW Packages
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => navigate("/nra-classes")}
               className="text-white hover:text-accent transition-colors font-semibold"
             >
               NRA Classes
@@ -87,7 +107,10 @@ const Navigation = () => {
               CCW Packages
             </button>
             <button
-              onClick={() => scrollToSection("services")}
+              onClick={() => {
+                navigate("/nra-classes");
+                setIsMobileMenuOpen(false);
+              }}
               className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
             >
               NRA Classes

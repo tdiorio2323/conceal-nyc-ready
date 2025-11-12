@@ -1,10 +1,24 @@
 import logo from "@/assets/logo.png";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Footer = () => {
+  const navigate = useNavigate();
+  const location = useLocation();
+
   const scrollToSection = (id: string) => {
-    const element = document.getElementById(id);
-    if (element) {
-      element.scrollIntoView({ behavior: "smooth" });
+    if (location.pathname !== "/") {
+      navigate("/");
+      setTimeout(() => {
+        const element = document.getElementById(id);
+        if (element) {
+          element.scrollIntoView({ behavior: "smooth" });
+        }
+      }, 100);
+    } else {
+      const element = document.getElementById(id);
+      if (element) {
+        element.scrollIntoView({ behavior: "smooth" });
+      }
     }
   };
 
@@ -31,6 +45,12 @@ const Footer = () => {
                 className="block text-muted-foreground hover:text-accent transition-colors"
               >
                 CCW Packages
+              </button>
+              <button
+                onClick={() => navigate("/nra-classes")}
+                className="block text-muted-foreground hover:text-accent transition-colors"
+              >
+                NRA Classes
               </button>
               <button
                 onClick={() => scrollToSection("services")}
