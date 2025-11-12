@@ -30,7 +30,7 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="relative py-20 overflow-hidden">
+    <section id="contact" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -43,7 +43,7 @@ const ContactForm = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Get In Touch
           </h2>
@@ -52,7 +52,7 @@ const ContactForm = () => {
           </p>
         </div>
 
-        <div className="grid lg:grid-cols-2 gap-12 max-w-6xl mx-auto">
+        <div className="grid lg:grid-cols-2 gap-8 lg:gap-12 max-w-6xl mx-auto">
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
@@ -115,7 +115,7 @@ const ContactForm = () => {
           </div>
 
           {/* Contact Form */}
-          <div className="bg-card border border-border/20 p-8 rounded-lg">
+          <div className="bg-card border border-border/20 p-6 sm:p-8 rounded-lg">
             <form onSubmit={handleSubmit} className="space-y-6">
               <div>
                 <Label htmlFor="name" className="text-card-foreground font-semibold">
@@ -178,7 +178,7 @@ const ContactForm = () => {
               </div>
               <Button
                 type="submit"
-                className="w-full font-bold py-6 text-lg text-white"
+                className="w-full font-bold py-4 sm:py-6 text-base sm:text-lg text-white"
                 style={{ backgroundColor: '#0041FF' }}
                 onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
                 onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}

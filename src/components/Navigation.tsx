@@ -44,9 +44,9 @@ const Navigation = () => {
       className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md`}
     >
       <div className="container mx-auto px-4">
-        <div className="flex items-center justify-between h-20">
+        <div className="flex items-center justify-between h-16 md:h-20">
           <button onClick={handleLogoClick} className="focus:outline-none">
-            <img src={logo} alt="103 Tactical" className="h-14 w-auto" />
+            <img src={logo} alt="103 Tactical" className="h-10 sm:h-12 md:h-14 w-auto" />
           </button>
 
           {/* Desktop Menu */}
@@ -89,12 +89,14 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-tactical-dark p-2"
+            className="md:hidden text-tactical-dark p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-0.5 bg-tactical-dark mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-tactical-dark mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-tactical-dark"></div>
+            <div className="flex flex-col gap-1.5">
+              <div className="w-6 h-0.5 bg-tactical-dark"></div>
+              <div className="w-6 h-0.5 bg-tactical-dark"></div>
+              <div className="w-6 h-0.5 bg-tactical-dark"></div>
+            </div>
           </button>
         </div>
 

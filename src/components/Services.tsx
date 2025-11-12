@@ -27,7 +27,7 @@ const Services = () => {
   ];
 
   return (
-    <section id="services" className="relative py-20 overflow-hidden">
+    <section id="services" className="relative py-12 sm:py-16 md:py-20 overflow-hidden">
       {/* Background Image with Overlay */}
       <div className="absolute inset-0 z-0">
         <img
@@ -40,7 +40,7 @@ const Services = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Our Services
           </h2>
@@ -49,7 +49,7 @@ const Services = () => {
           </p>
         </div>
 
-        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-8">
+        <div className="grid sm:grid-cols-2 lg:grid-cols-4 gap-6 sm:gap-8">
           {services.map((service, index) => {
             const Icon = service.icon;
             return (
@@ -57,9 +57,9 @@ const Services = () => {
                 key={index}
                 className="bg-card/95 backdrop-blur-sm border-border/20 hover:border-accent/50 transition-all hover:shadow-xl hover:shadow-accent/10 group"
               >
-                <CardHeader>
-                  <div className="bg-accent/20 w-16 h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
-                    <Icon className="w-8 h-8 text-accent" />
+                <CardHeader className="p-4 sm:p-6">
+                  <div className="bg-accent/20 w-12 h-12 sm:w-16 sm:h-16 rounded-lg flex items-center justify-center mb-4 group-hover:bg-accent/30 transition-colors">
+                    <Icon className="w-6 h-6 sm:w-8 sm:h-8 text-accent" />
                   </div>
                 </CardHeader>
                 <CardContent className="pt-0">

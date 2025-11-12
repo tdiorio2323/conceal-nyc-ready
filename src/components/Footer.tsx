@@ -25,12 +25,12 @@ const Footer = () => {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-white border-t border-border py-12">
+    <footer className="bg-white border-t border-border py-8 sm:py-10 md:py-12">
       <div className="container mx-auto px-4">
-        <div className="grid md:grid-cols-3 gap-12 mb-8">
+        <div className="grid md:grid-cols-3 gap-8 md:gap-12 mb-6 sm:mb-8">
           {/* Logo and Description */}
           <div>
-            <img src={logo} alt="103 Tactical" className="h-16 w-auto mb-4" />
+            <img src={logo} alt="103 Tactical" className="h-12 sm:h-14 md:h-16 w-auto mb-4" />
             <p className="text-black leading-relaxed">
               Professional firearms training with NY State DCJS certified instructors. Expert guidance for concealed carry licenses and comprehensive firearms education.
             </p>
@@ -103,7 +103,7 @@ const Footer = () => {
         </div>
 
         {/* Bottom Bar */}
-        <div className="border-t border-border pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
+        <div className="border-t border-border pt-6 sm:pt-8 flex flex-col md:flex-row justify-between items-center gap-3 sm:gap-4">
           <p className="text-black text-sm">
             © {currentYear} 103 Tactical. All rights reserved.
           </p>

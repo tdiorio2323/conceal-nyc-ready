@@ -35,9 +35,9 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-black">
+    <section id="why-choose-us" className="py-12 sm:py-16 md:py-20 bg-black">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Why Choose <span className="text-accent">103 Tactical</span>
           </h2>
@@ -46,17 +46,17 @@ const WhyChooseUs = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-7xl mx-auto">
+        <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto">
           {reasons.map((reason, index) => {
             const Icon = reason.icon;
             return (
               <div
                 key={index}
-                className="bg-secondary/30 border border-border/10 p-8 rounded-lg hover:bg-secondary/50 transition-all hover:border-accent/30 group"
+                className="bg-secondary/30 border border-border/10 p-6 sm:p-8 rounded-lg hover:bg-secondary/50 transition-all hover:border-accent/30 group"
               >
                 <div className="flex items-start gap-4">
-                  <div className="bg-accent/20 p-3 rounded-lg group-hover:bg-accent/30 transition-colors flex-shrink-0">
-                    <Icon className="w-7 h-7 text-accent" />
+                  <div className="bg-accent/20 p-2 sm:p-3 rounded-lg group-hover:bg-accent/30 transition-colors flex-shrink-0">
+                    <Icon className="w-6 h-6 sm:w-7 sm:h-7 text-accent" />
                   </div>
                   <div>
                     <h3 className="text-xl font-bold mb-3 text-white">{reason.title}</h3>

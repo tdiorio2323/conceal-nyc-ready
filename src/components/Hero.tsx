@@ -21,19 +21,19 @@ const Hero = () => {
       </div>
 
       {/* Content */}
-      <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white leading-tight">
+      <div className="relative z-10 container mx-auto px-4 py-20 sm:py-24 md:py-32 text-center">
+        <h1 className="text-3xl sm:text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white leading-tight">
           NYC Concealed Carry Classes
           <span className="block text-accent mt-2">with LIVE FIRE TRAINING</span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
+        <p className="text-base sm:text-lg md:text-xl lg:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
           New York State DCJS requires <strong>16 hours of classroom instruction</strong> plus{" "}
           <strong>two hours of live-fire training</strong> to qualify for a concealed-carry license.
         </p>
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={() => scrollToSection("packages")}
-            className="px-10 py-4 rounded-md text-lg font-bold transition-all transform hover:scale-105 shadow-lg text-white"
+            className="px-6 sm:px-10 py-4 rounded-md text-base sm:text-lg font-bold transition-all transform hover:scale-105 shadow-lg text-white w-full sm:w-auto"
             style={{ backgroundColor: '#0041FF' }}
             onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
             onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
@@ -42,7 +42,7 @@ const Hero = () => {
           </button>
           <button
             onClick={() => scrollToSection("contact")}
-            className="bg-secondary text-secondary-foreground px-10 py-4 rounded-md text-lg font-bold hover:bg-secondary/80 transition-all border-2 border-border"
+            className="bg-secondary text-secondary-foreground px-6 sm:px-10 py-4 rounded-md text-base sm:text-lg font-bold hover:bg-secondary/80 transition-all border-2 border-border w-full sm:w-auto"
           >
             Get Started
           </button>

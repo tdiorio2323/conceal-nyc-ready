@@ -14,7 +14,7 @@ const PackagesPage = () => {
         <Navigation />
 
         {/* Hero Section */}
-        <section className="relative pt-32 pb-20 overflow-hidden">
+        <section className="relative pt-24 sm:pt-28 md:pt-32 pb-12 sm:pb-16 md:pb-20 overflow-hidden">
           {/* Background Image with Overlay */}
           <div className="absolute inset-0 z-0">
             <img
@@ -27,7 +27,7 @@ const PackagesPage = () => {
 
           {/* Content */}
           <div className="relative z-10 container mx-auto px-4 text-center">
-            <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white">
+            <h1 className="text-3xl sm:text-4xl md:text-6xl font-extrabold mb-4 text-white">
               CCW Training Packages
             </h1>
             <p className="text-xl md:text-2xl text-accent font-bold mb-8">

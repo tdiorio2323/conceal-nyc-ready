@@ -37,9 +37,9 @@ const Packages = () => {
   ];
 
   return (
-    <section id="packages" className="py-20 bg-tactical-darker">
+    <section id="packages" className="py-12 sm:py-16 md:py-20 bg-tactical-darker">
       <div className="container mx-auto px-4">
-        <div className="text-center mb-16">
+        <div className="text-center mb-8 sm:mb-12 md:mb-16">
           <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Training Packages
           </h2>
@@ -48,12 +48,12 @@ const Packages = () => {
           </p>
         </div>
 
-        <div className="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
+        <div className="grid md:grid-cols-2 gap-6 md:gap-8 max-w-5xl mx-auto">
           {packages.map((pkg, index) => (
             <Card key={index} className="bg-card border-border/20 hover:border-accent/50 transition-all hover:shadow-xl hover:shadow-accent/10">
-              <CardHeader className="text-center pb-8">
-                <CardTitle className="text-2xl font-bold mb-2">{pkg.name}</CardTitle>
-                <CardDescription className="text-5xl font-extrabold text-accent">
+              <CardHeader className="text-center pb-6 sm:pb-8">
+                <CardTitle className="text-xl sm:text-2xl font-bold mb-2">{pkg.name}</CardTitle>
+                <CardDescription className="text-4xl sm:text-5xl font-extrabold text-accent">
                   {pkg.price}
                 </CardDescription>
               </CardHeader>
