@@ -35,13 +35,13 @@ const WhyChooseUs = () => {
   ];
 
   return (
-    <section id="why-choose-us" className="py-20 bg-tactical-dark">
+    <section id="why-choose-us" className="py-20 bg-black">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Why Choose <span className="text-accent">103 Tactical</span>
           </h2>
-          <p className="text-xl text-muted-foreground max-w-3xl mx-auto">
+          <p className="text-xl text-white max-w-3xl mx-auto">
             Professional, comprehensive firearms training backed by military and law enforcement expertise
           </p>
         </div>
@@ -59,8 +59,8 @@ const WhyChooseUs = () => {
                     <Icon className="w-7 h-7 text-accent" />
                   </div>
                   <div>
-                    <h3 className="text-xl font-bold mb-3 text-foreground">{reason.title}</h3>
-                    <p className="text-muted-foreground leading-relaxed">{reason.description}</p>
+                    <h3 className="text-xl font-bold mb-3 text-white">{reason.title}</h3>
+                    <p className="text-white leading-relaxed">{reason.description}</p>
                   </div>
                 </div>
               </div>

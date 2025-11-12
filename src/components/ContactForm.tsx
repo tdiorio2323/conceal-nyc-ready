@@ -5,6 +5,7 @@ import { Textarea } from "@/components/ui/textarea";
 import { Label } from "@/components/ui/label";
 import { toast } from "sonner";
 import { Mail, Phone, MapPin } from "lucide-react";
+import contactBackground from "@/assets/shooting-range.avif";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -29,13 +30,24 @@ const ContactForm = () => {
   };
 
   return (
-    <section id="contact" className="py-20 bg-tactical-darker">
-      <div className="container mx-auto px-4">
+    <section id="contact" className="relative py-20 overflow-hidden">
+      {/* Background Image with Overlay */}
+      <div className="absolute inset-0 z-0">
+        <img
+          src={contactBackground}
+          alt="Shooting Range"
+          className="w-full h-full object-cover"
+        />
+        <div className="absolute inset-0 bg-gradient-to-b from-tactical-darker/60 via-tactical-dark/50 to-tactical-darker/60"></div>
+      </div>
+
+      {/* Content */}
+      <div className="relative z-10 container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Get In Touch
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Ready to start your training? Contact us today to sign up or learn more
           </p>
         </div>
@@ -44,16 +56,16 @@ const ContactForm = () => {
           {/* Contact Info */}
           <div className="space-y-8">
             <div>
-              <h3 className="text-2xl font-bold mb-6 text-foreground">Contact Information</h3>
+              <h3 className="text-2xl font-bold mb-6 text-white">Contact Information</h3>
               <div className="space-y-6">
                 <div className="flex items-start gap-4">
                   <div className="bg-accent/20 p-3 rounded-lg">
                     <Phone className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Phone</p>
-                    <a href="tel:+1234567890" className="text-muted-foreground hover:text-accent transition-colors">
-                      (123) 456-7890
+                    <p className="font-semibold text-white mb-1">Phone</p>
+                    <a href="tel:+17188854353" className="text-white hover:text-accent transition-colors">
+                      (718) 885-4353
                     </a>
                   </div>
                 </div>
@@ -62,10 +74,10 @@ const ContactForm = () => {
                     <Mail className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Email</p>
+                    <p className="font-semibold text-white mb-1">Email</p>
                     <a
                       href="mailto:info@103tactical.com"
-                      className="text-muted-foreground hover:text-accent transition-colors"
+                      className="text-white hover:text-accent transition-colors"
                     >
                       info@103tactical.com
                     </a>
@@ -76,19 +88,28 @@ const ContactForm = () => {
                     <MapPin className="w-6 h-6 text-accent" />
                   </div>
                   <div>
-                    <p className="font-semibold text-foreground mb-1">Location</p>
-                    <p className="text-muted-foreground">New York City, NY</p>
+                    <p className="font-semibold text-white mb-1">Location</p>
+                    <a
+                      href="https://maps.app.goo.gl/E6rUnxebcQump2FW6"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="text-white hover:text-accent transition-colors"
+                    >
+                      2556 Arthur Kill Rd<br />
+                      Staten Island, NY 10309
+                    </a>
                   </div>
                 </div>
               </div>
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h4 className="text-xl font-bold mb-3 text-foreground">Office Hours</h4>
-              <div className="space-y-2 text-muted-foreground">
-                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
-                <p>Saturday: 10:00 AM - 4:00 PM</p>
-                <p>Sunday: Closed</p>
+              <h4 className="text-xl font-bold mb-3 text-white">Office Hours</h4>
+              <div className="space-y-2 text-white">
+                <p>Tuesday: 10:00 AM - 5:00 PM</p>
+                <p>Wednesday: 10:00 AM - 7:00 PM</p>
+                <p>Thursday - Saturday: 10:00 AM - 5:00 PM</p>
+                <p>Sunday - Monday: Closed</p>
               </div>
             </div>
           </div>
@@ -157,7 +178,10 @@ const ContactForm = () => {
               </div>
               <Button
                 type="submit"
-                className="w-full bg-accent text-accent-foreground hover:bg-tactical-red-hover font-bold py-6 text-lg"
+                className="w-full font-bold py-6 text-lg text-white"
+                style={{ backgroundColor: '#0041FF' }}
+                onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
+                onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
               >
                 Send Message
               </Button>

@@ -1,9 +1,11 @@
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Footer from "@/components/Footer";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from "@/components/ui/card";
 import { Award, Target, BookOpen, Shield } from "lucide-react";
 import { useNavigate } from "react-router-dom";
+import heroBackground from "@/assets/services-background.jpg";
 
 const NRAClasses = () => {
   const navigate = useNavigate();
@@ -54,12 +56,27 @@ const NRAClasses = () => {
   ];
 
   return (
-    <div className="min-h-screen">
-      <Navigation />
+    <>
+      <Helmet>
+        <title>NRA Classes | 103 Tactical</title>
+      </Helmet>
+      <div className="min-h-screen">
+        <Navigation />
 
       {/* Hero Section */}
-      <section className="relative pt-32 pb-20 bg-gradient-to-b from-tactical-dark to-tactical-darker">
-        <div className="container mx-auto px-4 text-center">
+      <section className="relative pt-32 pb-20 overflow-hidden">
+        {/* Background Image with Overlay */}
+        <div className="absolute inset-0 z-0">
+          <img
+            src={heroBackground}
+            alt="American Flag"
+            className="w-full h-full object-cover"
+          />
+          <div className="absolute inset-0 bg-gradient-to-b from-tactical-darker/60 via-tactical-dark/50 to-tactical-darker/60"></div>
+        </div>
+
+        {/* Content */}
+        <div className="relative z-10 container mx-auto px-4 text-center">
           <h1 className="text-4xl md:text-6xl font-extrabold mb-4 text-white">
             NRA Classes
           </h1>
@@ -110,15 +127,15 @@ const NRAClasses = () => {
       <section className="py-20 bg-tactical-dark">
         <div className="container mx-auto px-4">
           <div className="text-center mb-16">
-            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+            <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
               Why Choose <span className="text-accent">103 Tactical</span>?
             </h2>
           </div>
 
           <div className="grid md:grid-cols-2 lg:grid-cols-3 gap-8 max-w-6xl mx-auto">
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Highly Trained Staff</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">Highly Trained Staff</h3>
+              <p className="text-white leading-relaxed">
                 Our dedicated team is made up of male & female military and law enforcement
                 professionals, NY State DCJS Certified firearm instructors, NRA Certified
                 Instructors, and Firearms License Experts
@@ -126,18 +143,18 @@ const NRAClasses = () => {
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Private Lessons</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">Private Lessons</h3>
+              <p className="text-white leading-relaxed">
                 Receive one on one personal training in firearms safety, use, carry as well as
                 "Live Fire Training".
               </p>
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 Multi-state Conceal Carry License
               </h3>
-              <ul className="text-muted-foreground leading-relaxed space-y-2">
+              <ul className="text-white leading-relaxed space-y-2">
                 <li>• New Jersey resident & non-resident carry licenses</li>
                 <li>• Florida non-resident licenses</li>
                 <li>• Utah non-resident conceal carry licenses</li>
@@ -145,31 +162,31 @@ const NRAClasses = () => {
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 We Cater to NEW Shooters / Licensees
               </h3>
-              <p className="text-muted-foreground leading-relaxed mb-2">
+              <p className="text-white leading-relaxed mb-2">
                 Train to learn / learn to train.
               </p>
-              <p className="text-muted-foreground text-sm">
+              <p className="text-white text-sm">
                 You must be 21 years of age, be of good moral character and be a US Citizen or
                 Resident
               </p>
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">Private Classes</h3>
-              <p className="text-muted-foreground leading-relaxed">
+              <h3 className="text-xl font-bold mb-3 text-white">Private Classes</h3>
+              <p className="text-white leading-relaxed">
                 We provide private group / corporate classes. Anyone who sponsors a group of 10 or
                 more receives their training for FREE.
               </p>
             </div>
 
             <div className="bg-secondary/30 border border-border/10 p-6 rounded-lg">
-              <h3 className="text-xl font-bold mb-3 text-foreground">
+              <h3 className="text-xl font-bold mb-3 text-white">
                 Full Array of Specialty Courses
               </h3>
-              <ul className="text-muted-foreground leading-relaxed space-y-1 text-sm">
+              <ul className="text-white leading-relaxed space-y-1 text-sm">
                 <li>• NRA instructor classes</li>
                 <li>• NRA basic pistol classes</li>
                 <li>• NRA basic rifle classes</li>
@@ -185,10 +202,10 @@ const NRAClasses = () => {
       {/* CTA Section */}
       <section className="py-20 bg-tactical-darker">
         <div className="container mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-foreground">
+          <h2 className="text-3xl md:text-4xl font-bold mb-6 text-white">
             Ready to Get Started?
           </h2>
-          <p className="text-xl text-muted-foreground mb-8 max-w-2xl mx-auto">
+          <p className="text-xl text-white mb-8 max-w-2xl mx-auto">
             Contact us today to learn more about our NRA classes and schedule your training
           </p>
           <Button
@@ -201,7 +218,8 @@ const NRAClasses = () => {
       </section>
 
       <Footer />
-    </div>
+      </div>
+    </>
   );
 };
 

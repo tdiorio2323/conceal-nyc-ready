@@ -40,10 +40,10 @@ const Packages = () => {
     <section id="packages" className="py-20 bg-tactical-darker">
       <div className="container mx-auto px-4">
         <div className="text-center mb-16">
-          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-foreground">
+          <h2 className="text-4xl md:text-5xl font-bold mb-4 text-white">
             Training Packages
           </h2>
-          <p className="text-xl text-muted-foreground max-w-2xl mx-auto">
+          <p className="text-xl text-white max-w-2xl mx-auto">
             Professional firearms training designed to meet New York State requirements
           </p>
         </div>
@@ -68,7 +68,10 @@ const Packages = () => {
               <CardFooter>
                 <Button
                   onClick={scrollToContact}
-                  className="w-full bg-accent text-accent-foreground hover:bg-tactical-red-hover font-bold py-6 text-lg"
+                  className="w-full font-bold py-6 text-lg text-white"
+                  style={{ backgroundColor: '#0041FF' }}
+                  onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
+                  onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
                 >
                   Sign Up Now
                 </Button>

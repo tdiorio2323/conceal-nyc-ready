@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Navigation from "@/components/Navigation";
 import Hero from "@/components/Hero";
 import Packages from "@/components/Packages";
@@ -8,15 +9,20 @@ import Footer from "@/components/Footer";
 
 const Index = () => {
   return (
-    <div className="min-h-screen">
-      <Navigation />
-      <Hero />
-      <Packages />
-      <Services />
-      <WhyChooseUs />
-      <ContactForm />
-      <Footer />
-    </div>
+    <>
+      <Helmet>
+        <title>103 Tactical</title>
+      </Helmet>
+      <div className="min-h-screen">
+        <Navigation />
+        <Hero />
+        <Packages />
+        <Services />
+        <WhyChooseUs />
+        <ContactForm />
+        <Footer />
+      </div>
+    </>
   );
 };
 

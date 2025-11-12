@@ -41,9 +41,7 @@ const Navigation = () => {
 
   return (
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 ${
-        isScrolled ? "bg-tactical-dark/95 backdrop-blur-sm shadow-lg" : "bg-transparent"
-      }`}
+      className={`fixed top-0 left-0 right-0 z-50 transition-all duration-300 bg-white shadow-md`}
     >
       <div className="container mx-auto px-4">
         <div className="flex items-center justify-between h-20">
@@ -54,32 +52,35 @@ const Navigation = () => {
           {/* Desktop Menu */}
           <div className="hidden md:flex items-center space-x-8">
             <button
-              onClick={() => scrollToSection("packages")}
-              className="text-white hover:text-accent transition-colors font-semibold"
+              onClick={() => navigate("/packages")}
+              className="text-tactical-dark hover:text-accent transition-colors font-semibold"
             >
               CCW Packages
             </button>
             <button
               onClick={() => navigate("/nra-classes")}
-              className="text-white hover:text-accent transition-colors font-semibold"
+              className="text-tactical-dark hover:text-accent transition-colors font-semibold"
             >
               NRA Classes
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="text-white hover:text-accent transition-colors font-semibold"
+              onClick={() => navigate("/private-classes")}
+              className="text-tactical-dark hover:text-accent transition-colors font-semibold"
             >
               Private Classes
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="text-white hover:text-accent transition-colors font-semibold"
+              onClick={() => navigate("/application-assistance")}
+              className="text-tactical-dark hover:text-accent transition-colors font-semibold"
             >
               Application Assistance
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
-              className="bg-accent text-accent-foreground px-6 py-2 rounded font-bold hover:bg-tactical-red-hover transition-colors"
+              onClick={() => navigate("/contact")}
+              className="px-6 py-2 rounded font-bold transition-colors text-white"
+              style={{ backgroundColor: '#0041FF' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
             >
               Contact Us
             </button>
@@ -88,21 +89,24 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-white p-2"
+            className="md:hidden text-tactical-dark p-2"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-white mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-white"></div>
+            <div className="w-6 h-0.5 bg-tactical-dark mb-1.5"></div>
+            <div className="w-6 h-0.5 bg-tactical-dark mb-1.5"></div>
+            <div className="w-6 h-0.5 bg-tactical-dark"></div>
           </button>
         </div>
 
         {/* Mobile Menu */}
         {isMobileMenuOpen && (
-          <div className="md:hidden bg-tactical-dark border-t border-border/20 pb-4">
+          <div className="md:hidden bg-white border-t border-border/20 pb-4">
             <button
-              onClick={() => scrollToSection("packages")}
-              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
+              onClick={() => {
+                navigate("/packages");
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left px-4 py-3 text-tactical-dark hover:bg-muted transition-colors font-semibold"
             >
               CCW Packages
             </button>
@@ -111,26 +115,37 @@ const Navigation = () => {
                 navigate("/nra-classes");
                 setIsMobileMenuOpen(false);
               }}
-              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
+              className="block w-full text-left px-4 py-3 text-tactical-dark hover:bg-muted transition-colors font-semibold"
             >
               NRA Classes
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
+              onClick={() => {
+                navigate("/private-classes");
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left px-4 py-3 text-tactical-dark hover:bg-muted transition-colors font-semibold"
             >
               Private Classes
             </button>
             <button
-              onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
+              onClick={() => {
+                navigate("/application-assistance");
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left px-4 py-3 text-tactical-dark hover:bg-muted transition-colors font-semibold"
             >
               Application Assistance
             </button>
             <button
-              onClick={() => scrollToSection("contact")}
-              className="block w-full text-left px-4 py-3 bg-accent text-accent-foreground font-bold mt-2 mx-4 rounded hover:bg-tactical-red-hover transition-colors"
-              style={{ width: 'calc(100% - 2rem)' }}
+              onClick={() => {
+                navigate("/contact");
+                setIsMobileMenuOpen(false);
+              }}
+              className="block w-full text-left px-4 py-3 font-bold mt-2 mx-4 rounded transition-colors text-white"
+              style={{ width: 'calc(100% - 2rem)', backgroundColor: '#0041FF' }}
+              onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
+              onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
             >
               Contact Us
             </button>

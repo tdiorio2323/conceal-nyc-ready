@@ -33,7 +33,10 @@ const Hero = () => {
         <div className="flex flex-col sm:flex-row gap-4 justify-center items-center">
           <button
             onClick={() => scrollToSection("packages")}
-            className="bg-accent text-accent-foreground px-10 py-4 rounded-md text-lg font-bold hover:bg-tactical-red-hover transition-all transform hover:scale-105 shadow-lg"
+            className="px-10 py-4 rounded-md text-lg font-bold transition-all transform hover:scale-105 shadow-lg text-white"
+            style={{ backgroundColor: '#0041FF' }}
+            onMouseEnter={(e) => e.currentTarget.style.backgroundColor = '#0037DD'}
+            onMouseLeave={(e) => e.currentTarget.style.backgroundColor = '#0041FF'}
           >
             View Packages
           </button>
