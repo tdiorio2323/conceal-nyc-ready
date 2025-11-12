@@ -35,25 +35,25 @@ const Navigation = () => {
           <div className="hidden md:flex items-center space-x-8">
             <button
               onClick={() => scrollToSection("packages")}
-              className="text-foreground hover:text-accent transition-colors font-semibold"
+              className="text-white hover:text-accent transition-colors font-semibold"
             >
               CCW Packages
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-accent transition-colors font-semibold"
+              className="text-white hover:text-accent transition-colors font-semibold"
             >
               NRA Classes
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-accent transition-colors font-semibold"
+              className="text-white hover:text-accent transition-colors font-semibold"
             >
               Private Classes
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="text-foreground hover:text-accent transition-colors font-semibold"
+              className="text-white hover:text-accent transition-colors font-semibold"
             >
               Application Assistance
             </button>
@@ -68,12 +68,12 @@ const Navigation = () => {
           {/* Mobile Menu Button */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
-            className="md:hidden text-foreground p-2"
+            className="md:hidden text-white p-2"
             aria-label="Toggle menu"
           >
-            <div className="w-6 h-0.5 bg-foreground mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-foreground mb-1.5"></div>
-            <div className="w-6 h-0.5 bg-foreground"></div>
+            <div className="w-6 h-0.5 bg-white mb-1.5"></div>
+            <div className="w-6 h-0.5 bg-white mb-1.5"></div>
+            <div className="w-6 h-0.5 bg-white"></div>
           </button>
         </div>
 
@@ -82,25 +82,25 @@ const Navigation = () => {
           <div className="md:hidden bg-tactical-dark border-t border-border/20 pb-4">
             <button
               onClick={() => scrollToSection("packages")}
-              className="block w-full text-left px-4 py-3 text-foreground hover:bg-secondary/50 transition-colors font-semibold"
+              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
             >
               CCW Packages
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-4 py-3 text-foreground hover:bg-secondary/50 transition-colors font-semibold"
+              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
             >
               NRA Classes
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-4 py-3 text-foreground hover:bg-secondary/50 transition-colors font-semibold"
+              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
             >
               Private Classes
             </button>
             <button
               onClick={() => scrollToSection("services")}
-              className="block w-full text-left px-4 py-3 text-foreground hover:bg-secondary/50 transition-colors font-semibold"
+              className="block w-full text-left px-4 py-3 text-white hover:bg-secondary/50 transition-colors font-semibold"
             >
               Application Assistance
             </button>
