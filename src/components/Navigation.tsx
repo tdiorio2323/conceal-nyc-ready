@@ -86,16 +86,22 @@ const Navigation = () => {
             </button>
           </div>
 
-          {/* Mobile Menu Button */}
+          {/* Mobile Menu Button - Target Icon */}
           <button
             onClick={() => setIsMobileMenuOpen(!isMobileMenuOpen)}
             className="md:hidden text-tactical-dark p-3 min-h-[44px] min-w-[44px] flex items-center justify-center"
             aria-label="Toggle menu"
           >
-            <div className="flex flex-col gap-1.5">
-              <div className="w-6 h-0.5 bg-tactical-dark"></div>
-              <div className="w-6 h-0.5 bg-tactical-dark"></div>
-              <div className="w-6 h-0.5 bg-tactical-dark"></div>
+            <div className="relative w-7 h-7">
+              {/* Outer ring */}
+              <div className="absolute inset-0 border-2 border-tactical-dark rounded-full"></div>
+              {/* Middle ring */}
+              <div className="absolute inset-[5px] border-2 border-tactical-dark rounded-full"></div>
+              {/* Center red dot */}
+              <div className="absolute inset-[11px] bg-accent rounded-full"></div>
+              {/* Crosshairs */}
+              <div className="absolute top-1/2 left-0 right-0 h-0.5 bg-tactical-dark -translate-y-1/2"></div>
+              <div className="absolute left-1/2 top-0 bottom-0 w-0.5 bg-tactical-dark -translate-x-1/2"></div>
             </div>
           </button>
         </div>
