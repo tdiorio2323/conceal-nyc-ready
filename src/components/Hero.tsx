@@ -22,11 +22,11 @@ const Hero = () => {
 
       {/* Content */}
       <div className="relative z-10 container mx-auto px-4 py-32 text-center">
-        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-foreground leading-tight">
+        <h1 className="text-4xl md:text-6xl lg:text-7xl font-extrabold mb-6 text-white leading-tight">
           NYC Concealed Carry Classes
           <span className="block text-accent mt-2">with LIVE FIRE TRAINING</span>
         </h1>
-        <p className="text-lg md:text-xl lg:text-2xl mb-8 text-foreground/90 max-w-3xl mx-auto leading-relaxed">
+        <p className="text-lg md:text-xl lg:text-2xl mb-8 text-white max-w-3xl mx-auto leading-relaxed">
           New York State DCJS requires <strong>16 hours of classroom instruction</strong> plus{" "}
           <strong>two hours of live-fire training</strong> to qualify for a concealed-carry license.
         </p>
